@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import me.khrystal.find_new_slidestrip.ThirdActivity;
+
 public class HostActivity extends AppCompatActivity {
 
     @Override
@@ -44,6 +46,11 @@ public class HostActivity extends AppCompatActivity {
 
     public void second(View view) {
         Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void third(View view) {
+        Intent intent = new Intent(this,ThirdActivity.class);
         startActivity(intent);
     }
 }
