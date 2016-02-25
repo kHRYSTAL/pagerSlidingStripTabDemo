@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import me.khrystal.find_new_slidestrip.FifthActivity;
+import me.khrystal.find_new_slidestrip.FourthActivity;
 import me.khrystal.find_new_slidestrip.ThirdActivity;
 
 public class HostActivity extends AppCompatActivity {
@@ -51,6 +53,15 @@ public class HostActivity extends AppCompatActivity {
 
     public void third(View view) {
         Intent intent = new Intent(this,ThirdActivity.class);
+        startActivity(intent);
+    }
+
+    public void fourth(View view) {
+        Intent intent = new Intent(this,FourthActivity.class);
+        startActivity(intent);
+    }
+    public void fifth(View view) {
+        Intent intent = new Intent(this,FifthActivity.class);
         startActivity(intent);
     }
 }

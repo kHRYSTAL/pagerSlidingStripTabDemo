@@ -1,0 +1,16 @@
+<com.ogaclejapan.smarttablayout.SmartTabLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewpagertab"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    app:stl_distributeEvenly="true"
+    app:stl_dividerColor="#0000"
+    app:stl_dividerThickness="0dp"
+    app:stl_indicatorColor="#0000"
+    app:stl_indicatorThickness="0dp"
+    app:stl_underlineColor="#0000"
+    app:stl_underlineThickness="0dp"
+    />
+
+
