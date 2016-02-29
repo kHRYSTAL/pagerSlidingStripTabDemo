@@ -26,11 +26,13 @@
             android:name="me.khrystal.find_new_slidestrip.ThirdActivity"
             android:label="@string/title_activity_third" >
         </activity>
-        <activity
-            android:name="me.khrystal.find_new_slidestrip.FourthActivity">
+        <activity android:name="me.khrystal.find_new_slidestrip.FourthActivity" >
+        </activity>
+        <activity android:name="me.khrystal.find_new_slidestrip.FifthActivity" >
         </activity>
         <activity
-            android:name="me.khrystal.find_new_slidestrip.FifthActivity">
+            android:name="me.khrystal.test.ScrollViewActivity"
+            android:label="@string/title_activity_scroll_view" >
         </activity>
     </application>
 

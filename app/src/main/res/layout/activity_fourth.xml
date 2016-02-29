@@ -27,6 +27,9 @@
     <!--app:stl_defaultTabTextMinWidth="0dp"-->
     <!--app:stl_distributeEvenly="false"-->
     <!--/>-->
+
+    <!--app:stl_customTabTextLayoutId="@layout/custom_tab"-->
+    <!--app:stl_customTabTextViewId="@+id/custom_text"-->
     <com.ogaclejapan.smarttablayout.SmartTabLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -35,8 +38,7 @@
         app:stl_dividerThickness="0dp"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        app:stl_customTabTextLayoutId="@layout/custom_tab"
-        app:stl_customTabTextViewId="@+id/custom_text"
+
         app:stl_indicatorColor="#00000000"
         app:stl_indicatorInterpolation="linear"
         app:stl_indicatorThickness="3dp"
