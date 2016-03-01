@@ -40,6 +40,10 @@
             android:name="me.khrystal.custom_view_pager.SeventhActivity"
             android:label="@string/title_activity_scroll_view" >
         </activity>
+        <activity
+            android:name="me.khrystal.use_recycler_view_pager.EighthActivity"
+            android:label="@string/title_activity_scroll_view" >
+        </activity>
     </application>
 
 </manifest>

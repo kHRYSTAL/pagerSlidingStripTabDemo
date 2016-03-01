@@ -72,6 +72,7 @@ public class FifthActivity extends AppCompatActivity {
             list.add("Tab " + i);
         }
         pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(), list));
+
         tabs.setViewPager(pager);
     }
 }
