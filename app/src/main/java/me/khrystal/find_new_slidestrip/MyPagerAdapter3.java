@@ -1,23 +1,29 @@
-package me.khrystal.pagerslidingtabstripdemo;
+package me.khrystal.find_new_slidestrip;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import me.khrystal.pagerslidingtabstripdemo.FragmentContent;
+
 /**
- * Created by ASUS on 2016/2/18.
+ * 在此写用途
+ *
+ * @FileName: me.khrystal.find_new_slidestrip.MyPagerAdapter3.java
+ * @author: kHRYSTAL
+ * @email: 723526676@qq.com
+ * @date: 2016-03-01 16:59
  */
-public class MyPagerAdapter1 extends FragmentPagerAdapter {
+public class MyPagerAdapter3  extends FragmentPagerAdapter {
 
     private ArrayList<String> titles;
 
 
-    public MyPagerAdapter1(FragmentManager fm, ArrayList<String> list) {
+    public MyPagerAdapter3(FragmentManager fm, ArrayList<String> list) {
         super(fm);
         this.titles = list;
     }
@@ -45,7 +51,7 @@ public class MyPagerAdapter1 extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         Bundle b = new Bundle();
-        b.putString("title", titles.get(position));
+        b.putString("title", titles.get(position%titles.size()));
         return FragmentContent.getInstance(b);
     }
 }

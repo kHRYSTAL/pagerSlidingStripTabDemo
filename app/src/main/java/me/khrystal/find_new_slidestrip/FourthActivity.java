@@ -40,7 +40,7 @@ public class FourthActivity extends AppCompatActivity {
     private RelativeLayout searchView1;
     private RelativeLayout layout;
     LinearLayout container;
-
+    private int currIndex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,27 +62,34 @@ public class FourthActivity extends AppCompatActivity {
                 RelativeLayout searchView = (RelativeLayout)searchLayout.findViewById(R.id.custom_search);
                 switch (position) {
                     case 0:
-                        tab.setText("Tab 0");
+                        tab.setText("Tab 4");
                         break;
                     case 1:
-                        tab.setText("Tab 1");
+                        tab.setText("Tab 0");
                         break;
                     case 2:
-                        tab.setText("Tab 2");
+                        tab.setText("Tab 1");
                         break;
                     case 3:
-                        tab.setText("Tab 3");
+                        tab.setText("Tab 2");
                         break;
                     case 4:
-                        tab1.setText("Tab 4");
+                        tab1.setText("Tab 3");
                         return layout;
-
+                    case 5:
+                        tab.setText("Tab 4");
+                        break;
+                    case 6:
+                        tab.setText("Tab 0");
+                        break;
                     default:
                         throw new IllegalStateException("Invalid position: " + position);
                 }
                 return searchLayout;
             }
         });
+
+
         tabs.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -91,6 +98,7 @@ public class FourthActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
+                currIndex = position;
                 if (position==4){
                     tab1.setVisibility(View.GONE);
                     searchView1.setVisibility(View.VISIBLE);
@@ -102,15 +110,23 @@ public class FourthActivity extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                if(state==ViewPager.SCROLL_STATE_IDLE){//当滑动停止时，判断是否到达边界
+                    if(currIndex==6){
+                        pager.setCurrentItem(1,false);
+                    }else if(currIndex==0){
+                        pager.setCurrentItem(5,false);
+                    }
+                }
             }
         });
         int width = wm.getDefaultDisplay().getWidth();
        // tabs.setMinimumWidth(DensityUtil.px2dip(this,((float)(width-100)/(float)2)));
         ArrayList<String> list = new ArrayList<>();
+        list.add("Tab 4");
         for (int i = 0; i < 5; i++) {
             list.add("Tab " + i);
         }
+        list.add("Tab 0");
         pager.setAdapter(new MyPagerAdapter1(getSupportFragmentManager(), list));
 
 //        pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -185,6 +201,7 @@ public class FourthActivity extends AppCompatActivity {
                 return pager.dispatchTouchEvent(event);
             }
         });
+        pager.setCurrentItem(1);
         tabs.setViewPager(pager);
     }
 
