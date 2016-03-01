@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:stl_dividerThickness="0dp"
+        app:stl_indicatorAlwaysInCenter="true"
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:stl_customTabTextLayoutId="@layout/custon_tab_1"
+        app:stl_customTabTextViewId="@+id/custom_text"
+        app:stl_indicatorColor="#00000000"
+        app:stl_indicatorInterpolation="linear"
+        app:stl_indicatorThickness="3dp"
+        app:stl_underlineThickness="0dp"
+        />
+    <me.khrystal.custom_view_pager.ClipViewPager
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/viewpager"
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:clipChildren="false"
+        android:overScrollMode="never" />
+
+</LinearLayout>

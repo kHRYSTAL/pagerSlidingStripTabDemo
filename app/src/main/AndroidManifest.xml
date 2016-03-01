@@ -36,6 +36,10 @@
             android:name="me.khrystal.test.ScrollViewActivity"
             android:label="@string/title_activity_scroll_view" >
         </activity>
+        <activity
+            android:name="me.khrystal.custom_view_pager.SeventhActivity"
+            android:label="@string/title_activity_scroll_view" >
+        </activity>
     </application>
 
 </manifest>

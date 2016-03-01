@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import me.khrystal.custom_view_pager.SeventhActivity;
 import me.khrystal.find_new_slidestrip.FifthActivity;
 import me.khrystal.find_new_slidestrip.FourthActivity;
 import me.khrystal.find_new_slidestrip.ThirdActivity;
@@ -74,6 +75,11 @@ public class HostActivity extends AppCompatActivity {
 
     public void sixth(View view) {
         Intent intent = new Intent(this,SixthActivity.class);
+        startActivity(intent);
+    }
+
+    public void seventh(View view) {
+        Intent intent = new Intent(this,SeventhActivity.class);
         startActivity(intent);
     }
 }
