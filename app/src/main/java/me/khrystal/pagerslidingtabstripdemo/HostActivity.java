@@ -11,6 +11,7 @@ import me.khrystal.find_new_slidestrip.FifthActivity;
 import me.khrystal.find_new_slidestrip.FourthActivity;
 import me.khrystal.find_new_slidestrip.ThirdActivity;
 import me.khrystal.test.ScrollViewActivity;
+import me.khrystal.use_recycler_view_pager.SixthActivity;
 
 public class HostActivity extends AppCompatActivity {
 
@@ -68,6 +69,11 @@ public class HostActivity extends AppCompatActivity {
 
     public void scroll(View view) {
         Intent intent = new Intent(this,ScrollViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void sixth(View view) {
+        Intent intent = new Intent(this,SixthActivity.class);
         startActivity(intent);
     }
 }

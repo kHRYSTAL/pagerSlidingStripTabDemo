@@ -29,6 +29,8 @@
         <activity android:name="me.khrystal.find_new_slidestrip.FourthActivity" >
         </activity>
         <activity android:name="me.khrystal.find_new_slidestrip.FifthActivity" >
+    </activity>
+        <activity android:name="me.khrystal.use_recycler_view_pager.SixthActivity" >
         </activity>
         <activity
             android:name="me.khrystal.test.ScrollViewActivity"
