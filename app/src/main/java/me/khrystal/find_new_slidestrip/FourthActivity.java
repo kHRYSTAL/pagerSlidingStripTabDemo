@@ -62,7 +62,7 @@ public class FourthActivity extends AppCompatActivity {
                 RelativeLayout searchView = (RelativeLayout)searchLayout.findViewById(R.id.custom_search);
                 switch (position) {
                     case 0:
-                        tab.setText("Tab 4");
+                        tab.setText("");
                         break;
                     case 1:
                         tab.setText("Tab 0");
@@ -74,13 +74,13 @@ public class FourthActivity extends AppCompatActivity {
                         tab.setText("Tab 2");
                         break;
                     case 4:
-                        tab1.setText("Tab 3");
-                        return layout;
+                        tab.setText("Tab 3");
+                        break;
                     case 5:
                         tab.setText("Tab 4");
                         break;
                     case 6:
-                        tab.setText("Tab 0");
+                        tab.setText("");
                         break;
                     default:
                         throw new IllegalStateException("Invalid position: " + position);
