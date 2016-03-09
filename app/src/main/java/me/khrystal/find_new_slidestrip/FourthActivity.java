@@ -89,11 +89,25 @@ public class FourthActivity extends AppCompatActivity {
             }
         });
 
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Tab 4");
+        for (int i = 0; i < 5; i++) {
+            list.add("Tab " + i);
+        }
+        list.add("Tab 0");
 
         tabs.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            int mState;
+
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+                if (mState == ViewPager.SCROLL_STATE_IDLE) {
+//                    pager.setVisibility(View.GONE);
+//                    pager.setVisibility(View.VISIBLE);
+                } else if (mState != ViewPager.SCROLL_STATE_IDLE) {
+//                    pager.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
@@ -110,25 +124,20 @@ public class FourthActivity extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                if(state==ViewPager.SCROLL_STATE_IDLE){//当滑动停止时，判断是否到达边界
+                mState = state;
+                /*if(state==ViewPager.SCROLL_STATE_IDLE){//当滑动停止时，判断是否到达边界
                     if(currIndex==6){
                         pager.setCurrentItem(1,false);
                     }else if(currIndex==0){
                         pager.setCurrentItem(5,false);
                     }
-                }
+                }*/
             }
         });
         int width = wm.getDefaultDisplay().getWidth();
        // tabs.setMinimumWidth(DensityUtil.px2dip(this,((float)(width-100)/(float)2)));
-        ArrayList<String> list = new ArrayList<>();
-        list.add("Tab 4");
-        for (int i = 0; i < 5; i++) {
-            list.add("Tab " + i);
-        }
-        list.add("Tab 0");
-        pager.setAdapter(new MyPagerAdapter1(getSupportFragmentManager(), list));
 
+        pager.setAdapter(new MyPagerAdapter3(getSupportFragmentManager(), list));
 //        pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 //            @Override
 //            public void onPageScrolled(int i, float f, int i1) {
@@ -193,14 +202,14 @@ public class FourthActivity extends AppCompatActivity {
         pager.setOffscreenPageLimit(5);
 
         pager.setPageMargin(5);
-        container.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                // dispatch the events to the ViewPager, to solve the problem that we can swipe only the middle view.
-                return pager.dispatchTouchEvent(event);
-            }
-        });
+//        container.setOnTouchListener(new View.OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                // dispatch the events to the ViewPager, to solve the problem that we can swipe only the middle view.
+//                return pager.dispatchTouchEvent(event);
+//            }
+//        });
         pager.setCurrentItem(1);
         tabs.setViewPager(pager);
     }

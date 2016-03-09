@@ -13,6 +13,8 @@ import com.gxz.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
 
+import me.khrystal.find_new_slidestrip.MyPagerAdapter3;
+
 public class MainActivity extends AppCompatActivity {
 
     private PagerSlidingTab tabs;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 10; i++) {
             list.add("Tab " + i);
         }
-        pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(), list));
+        pager.setAdapter(new MyPagerAdapter3(getSupportFragmentManager(), list));
         tabs.setViewPager(pager);
         pager.setCurrentItem(0);
         setTabsValue();

@@ -3,6 +3,8 @@ package me.khrystal.custom_view_pager;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
+import com.nineoldandroids.view.ViewHelper;
+
 /**
  * 在此写用途
  *
@@ -30,7 +32,9 @@ public class ScalePageTransformer implements ViewPager.PageTransformer {
         float slope = (MAX_SCALE - MIN_SCALE) / 1;
         //一个公式
         float scaleValue = MIN_SCALE + tempScale * slope;
-        page.setScaleX(scaleValue);
-        page.setScaleY(scaleValue);
+//        page.setScaleX(scaleValue);
+//        page.setScaleY(scaleValue);
+        ViewHelper.setScaleX(page,scaleValue);
+        ViewHelper.setScaleY(page,scaleValue);
     }
 }

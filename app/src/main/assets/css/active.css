@@ -1,0 +1,94 @@
+body{background-color:#1b1b1b;}
+a:focus{text-decoration: none;}
+.container{padding:0 20px!important;color:#000;margin-bottom:36px;}
+.list-inline{margin-left:0!important;margin-bottom:0!important;}
+.active-nav-list{margin-top:10px;}
+.active-list li{margin:12px 0 4px 0;margin-right:-moz-calc((100% - 287px)/3);margin-right:-webkit-calc((100% - 287px)/3);margin-right: calc((100% - 287px)/3);}
+.active-list li:last-child{margin-right:0;}
+.active-list li a{color:#fff;}
+.active-list li.active{background-color:#585858;}
+
+.nav-tabs{border-bottom:0;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{text-decoration:none;color:#fff;border:0;background-color:transparent;}
+.nav-tabs>li>a{border-radius:0;border:0;}
+.nav-tabs>li>a:hover, .nav-tabs>li>a:focus{border-radius:0;background-color:#585858;}
+
+.download-top{background-color: #343434;color:#fff;}
+.download-top .download-close{cursor:pointer;display:inline-block;padding:7px 10px 7px 8px;}
+.download-top .download-close img{width:14px;height:14px;}
+.download-top .download-slogan{display:inline-block;}
+.download-top .download-slogan img{width:33px;}
+.download-top .download-slogan p{display:inline-block;font-size:13px;line-height:18px;margin-bottom:0;}
+
+.download-top .download-btn a{display:inline-block;color:#fff;padding:0 15px;font-size:16px;background-color: #ff3660;line-height:34px;}
+
+.active-detail{background-color:#fff;border-radius:3px;overflow:hidden;}
+.active-detail header{position:relative;}
+.active-detail header img{width:100%;}
+.active-detail .active-tag{position:absolute;top:10px;left:19px;margin-bottom:0;}
+.active-detail .active-tag li{padding:2px 8px;font-size:11px;color:#fff;background-color:rgba(0,0,0,0.2);}
+
+.active-detail .active-status{position:absolute;left:19px;bottom:-9px;display:inline-block;padding:0 10px;margin-bottom:0;font-size:11px;color:#fff;background-color:#ff3660;line-height:20px;}
+
+.active-text{padding:0 23px;}
+.active-text header h2{font-size:17px;line-height:25px;margin:26px 0 5px 0;}
+.active-text header p{font-size:12px;color:#7f7f7f;margin-bottom:20px;}
+.active-text article{padding-bottom:5px;}
+.active-text article header{font-size:14px;line-height:29px;padding-bottom:3px;}
+.active-text article i{display:inline-block;width:14px;height:18px;overflow:hidden;background:url(../img/icon.png) no-repeat;background-size:18px 269px;margin:6px 18px 0 0;background-position:0 -28px;}
+.active-text article  .address-icon{background-position:0 -54px;}
+.active-text article  .content-icon{background-position:0 -80px;}
+.active-text article  .tip-icon{background-position:0 -103px;}
+.active-text article  .schedule-icon{background-position:0 -131px;}
+.active-text article p{font-size:13px;line-height:21px;margin:0;}
+.active-text article ul li{font-size:13px;line-height:20px;}
+
+.active-teacher{padding-top:29px;background-color:#fff;border-radius:3px;overflow:hidden;}
+.active-teacher header{text-align: center;}
+.active-teacher header img{width:74px;height:74px;}
+.active-teacher .active-text header h2{font-size:16px;}
+.active-teacher .active-text .teacher-profile{border-bottom:1px solid #ccc;}
+.active-teacher .active-text article p{padding:10px 0;}
+.active-teacher .active-text article .tip-icon{margin:19px 13px 19px 0;}
+.active-teacher .active-text article header{text-align:left;line-height:57px;}
+.active-teacher .active-text article .part-icon{margin:19px 13px 19px 0;background-position:0 -156px;}
+.active-teacher .active-text .active-img{position:relative;}
+.active-teacher .active-text .active-img img{width:100%;}
+.active-teacher .active-text .active-img p{position:absolute;bottom:5px;width:100%;padding:7px 8px;font-size:13px;color:#fff;background:rgba(0,0,0,0.7);}
+.active-teacher .active-text article header .img-num i{margin:0;margin-left:10px;width:9px;background-position:0 -242px;}
+
+.active-evaluate{padding-top:21px;background-color:#fff;border-radius:3px;overflow:hidden;}
+.active-evaluate .groom-icon{width:18px;margin-right:8px;background-position:0 -184px;}
+.active-evaluate>article{margin:0 23px;}
+.active-evaluate article header{line-height:32px;}
+.active-evaluate article header .img-num i{margin:0;margin-left:10px;width:7px;background-position:0 -242px;}
+.active-evaluate article .expert-list li{margin-top:15px;padding-bottom:7px;border-bottom:1px solid #e5e5e5;}
+.active-evaluate article .expert-list li:last-child{border-bottom:0;}
+.active-evaluate article .expert-list header img{width:32px;margin-right:12px;}
+.active-evaluate article .expert-list header .expert-name{font-size:15px;margin-bottom:5px;line-height:15px;}
+.active-evaluate article .expert-list header .expert-title{font-size:12px;color:rgba(32,32,32,0.6);line-height:12px;}
+.active-evaluate article .expert-list .evaluate-detail{font-size:13px;line-height:20px;}
+.active-evaluate .active-text{padding:0;}
+.active-evaluate .active-text article{padding-bottom:0;}
+.active-evaluate .active-text article header{padding-bottom:5px;}
+.active-evaluate .evaluate-icon{width:18px;margin-right:8px;background-position:0 -216px;}
+.active-evaluate .evaluate-tag{display:inline-block;line-height:26px;padding:0 14px;border:1px solid #000;background-color:#e2e2e2;margin-right:14px;margin-top:13px;margin-bottom:2px;}
+.active-evaluate .evaluate-list{padding-top:9px;}
+
+.active-relate{margin-top:0;}
+.active-relate .active-other{width:50%;margin-top:10px;}
+.active-relate .left-active{margin-right:5px;}
+.active-relate .right-active{margin-left:5px;}
+.active-relate .active-other>article>article{background-color:#fff;border-radius:3px;overflow:hidden;}
+.active-relate .active-other article article header article{height:100px;overflow:hidden;}
+.active-relate .active-other article article header article img{width:100%;}
+.active-relate .active-other article article header p{display:inline-block;margin:0;
+position:relative;left:10px;top:-10px;padding:0 10px;font-size:11px;line-height:20px;background-color:#ff3660;color:#fff;}
+.active-relate .active-other article article header .plan{background-color:#00c1c3;}
+.active-relate .active-other article article>article{padding:0 10px;}
+.active-relate .active-other article article p{line-height:21px;margin:0;}
+.active-relate .active-other article article .name{font-size:13px;color:#8c8c8c;}
+.active-relate .active-other article article .topic{font-size:14px;margin-bottom:3px;}
+.active-relate .active-other article article .time{margin-bottom:12px;}
+
+.container footer{position:fixed;right:24px;bottom:10px;width:64px;padding:11px 0;border-radius:50%;background-color: #ff3660;font-size:16px;line-height:21px;color:#fff;text-align:center;}

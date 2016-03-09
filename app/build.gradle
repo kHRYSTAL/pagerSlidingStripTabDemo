@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.gxz.pagerslidingtabstrip:library:1.2'
     compile 'com.ogaclejapan.smarttablayout:library:1.6.0@aar'
     compile 'jp.satorufujiwara:recyclerview-binder:1.2.0'
