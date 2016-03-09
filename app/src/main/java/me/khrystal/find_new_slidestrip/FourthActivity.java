@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -34,7 +35,7 @@ import me.khrystal.utils.DensityUtil;
  */
 public class FourthActivity extends AppCompatActivity {
     private SmartTabLayout tabs;
-    private ViewPager pager;
+    private MyJazzyViewPager pager;
     private RelativeLayout searchLayout;
     private TextView tab1;
     private RelativeLayout searchView1;
@@ -45,7 +46,7 @@ public class FourthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fourth);
-        pager = (ViewPager) findViewById(R.id.pager);
+        pager = (MyJazzyViewPager) findViewById(R.id.pager);
         tabs = (SmartTabLayout) findViewById(R.id.tabLayout);
         WindowManager wm = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
         layout = (RelativeLayout) LayoutInflater.from(FourthActivity.this).inflate(R.layout.custom_tab_search,tabs,false);
@@ -197,8 +198,17 @@ public class FourthActivity extends AppCompatActivity {
 //                }
 //            }
 //        });
-        pager.setPageTransformer(true,new ScalePageTransformer());
+        pager.setPageTransformer(true,new DepthPageTransformer());
 
+        pager.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                View view = pager.getChildAt(currIndex);
+                if (view!=null){
+                    view.bringToFront();
+                }
+            }
+        });
         pager.setOffscreenPageLimit(5);
 
         pager.setPageMargin(5);

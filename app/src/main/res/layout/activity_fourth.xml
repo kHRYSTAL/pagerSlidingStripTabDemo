@@ -48,7 +48,7 @@
         app:stl_underlineThickness="0dp"
         />
 
-    <me.khrystal.find_new_slidestrip.InfiniteViewPager
+    <me.khrystal.find_new_slidestrip.MyJazzyViewPager
         android:id="@+id/pager"
         android:clipChildren="false"
         android:layout_marginLeft="20dp"

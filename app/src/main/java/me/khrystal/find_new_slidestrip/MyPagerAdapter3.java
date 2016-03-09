@@ -52,6 +52,9 @@ public class MyPagerAdapter3  extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         Bundle b = new Bundle();
         b.putString("title", titles.get(position%titles.size()));
-        return FragmentWebContent.getInstance(b);
+        if (position<3)
+            return FragmentWebContent.getInstance(b);
+        else
+            return FragmentListContent.getInstance(b);
     }
 }
